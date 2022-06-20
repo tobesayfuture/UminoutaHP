@@ -1,0 +1,379 @@
+@charset "utf-8";
+
+
+body {
+  background-color: rgb(1, 1, 1);
+  color: #CCC;
+}
+a {
+  text-decoration: none;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+/***************************************************
+header
+***************************************************/
+
+header {
+  height: 10vh;
+  align-items: center;
+  position: relative;
+}
+.shachou {
+  position: absolute;
+  align-items: center;
+}
+.shachou>img {
+  width: 40px;
+}
+
+/********** header navigation **********/
+
+.headerNavigation {
+  background-color: rgb(39, 0, 76);
+  padding: 10px;
+  position: absolute;
+  top: 10vh;
+}
+.headerMenu {
+  margin: 10px; 
+  text-align: center;
+}
+.headerItem {
+  display: block;
+  margin: 10px auto;
+}
+.headerItem>a {
+  color: #ccc;
+}
+
+/********** hamburgerメニュー部分 **********/
+.burgerWrapper {
+  position: fixed;
+  right: 3%;
+}
+.burger {
+  position: relative;
+}
+.burger>div {
+  width: 25px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: #ccc;
+  cursor: pointer;
+  margin: 5px;
+  position: absolute;
+  right: 0; 
+}
+.line1 {
+  top: -13px;
+}
+.line2 {
+  top: -5px;
+}
+.line3 {
+  top: 3px;
+}
+
+
+
+/***************************************************
+logo area
+***************************************************/
+
+.logoArea {
+  position: relative;
+  background-image: url(/IMAGE/kaisendon.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 90vh;
+}
+/* .logoImageWrapper {
+}
+.logoImage {
+
+} */
+.logoText {
+  position: absolute;
+  top: 0;
+  left: 20%;
+}
+.logoText>h2 {
+  color: rgb(1, 1, 1);
+  font-size: 3rem;
+  text-shadow: 3px 3px white;
+}
+
+
+/***************************************************
+news area
+***************************************************/
+.newsArea {
+  margin: 20px auto;
+}
+.newsList{
+  margin: 10px;
+  padding: 0;
+}
+.newsList .newsItem a{
+  background-color: rgb(1, 1, 1);
+  display: flex;
+  flex-wrap: nowrap;
+  text-decoration: none;
+  color: #ccc;
+  border-bottom: 1px solid #CCC;
+  padding: 20px 20px;
+}
+.newsList .newsItem:first-child a{
+  border-top: 2px solid #CCC;
+}
+.newsList .newsItem .date{
+  margin: 0;
+  min-width: 120px;
+  color: #ccc;
+  padding: 0 auto;
+}
+.newsList .newsItem .title{
+  margin: 0 auto;
+  width: 100%;
+}
+.newsList .newsItem a:hover .title{
+  color: rgb(255, 255, 255);
+}
+
+/***************************************************
+main area
+***************************************************/
+    
+/* main {
+
+} */
+.flozenImage,
+.deliveryImage,
+.togoImage,
+.cateringImage {
+  width: 100%;
+  border-radius: 5px;
+}
+.flozenImageWrapper,
+.deliveryImageWrapper,
+.togoImageWrapper,
+.cateringImageWrapper {
+  width: 70%;
+  margin: 10px auto;
+}
+.flozenDescription,
+.deliveryDescription,
+.togoDescription,
+.cateringDescription {
+  width: 70%;
+  margin: 10px auto;
+}
+
+/********** 冷凍寿司 **********/
+
+.flozen {
+
+}
+.flozenImageWrapper {
+
+}
+.flozenImageWrapper>a {
+
+}
+.flozenImage {
+
+}
+.flozenDescription {
+
+}
+.flozenDescription>h3 {
+
+}
+.flozenDescription>p {
+  
+}
+
+/********** デリバリー **********/
+
+.delivery {
+
+}
+.deliveryImageWrapper {
+
+}
+.deliveryImageWrapper>a {
+
+}
+.deliveryImage {
+
+}
+.deliveryDescription {
+
+}
+.deliveryDescription>h3 {
+
+}
+.deliveryDescription>p {
+
+}
+
+
+/********** 持ち帰り **********/
+
+.togo {
+
+}
+.togoImageWrapper {
+
+}
+.togoImageWrapper>a {
+
+}
+.togoImage {
+
+}
+.togoDescription {
+
+}
+.togoDescription>h3 {
+
+}
+.togoDescription>p {
+
+}
+
+
+/********** ケータリング **********/
+
+.catering {
+
+}
+.cateringImageWrapper {
+
+}
+.cateringImageWrapper>a {
+
+}
+.cateringImage {
+
+}
+.cateringDescription {
+
+}
+.cateringDescription>h3 {
+
+}
+.cateringDescription>p {
+
+}
+
+
+/***************************************************
+information area
+***************************************************/
+
+/********** information area 全体一括 **********/
+
+.informationWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.informationWrapper div:not(:last-child) {
+  margin-right: 10px;
+}
+.informationWrapper div a {
+  color: #CCC;
+}
+.informationWrapper div a:hover {
+  color: white;
+}
+.informationWrapper div a i {
+  font-size: 2rem;
+}
+.informationDescription {
+  display: none;
+}
+.mediaIcon {
+
+}
+
+/********** information area 全体一括 メディアクエリ **********/
+
+@media (min-width:600px) and (max-width:1024px) {
+  .informationDescription {
+    display: inline-block;
+  }
+}
+@media (min-width:1025px) {
+  .informationWrapper {
+    padding: 20px 15px;
+  }
+  .informationDescription {
+    display: inline-block;
+  }
+  .informationWrapper div:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+/********** youtube **********/
+
+.youtube {
+
+}
+
+/********** mail magazine **********/
+
+.mailmag {
+
+}
+
+/********** instagram **********/
+
+.instagram {
+
+}
+
+/********** facebook **********/
+
+.facebook {
+
+}
+
+
+/***************************************************
+footer area
+***************************************************/
+
+footer {
+  background-color: black;
+  width: 100%;
+}
+.footerNavigation {
+  padding: 10px;
+}
+.footerMenu {
+  margin: 10px; 
+  text-align: center;
+}
+.footerItem {
+  display: inline-block;
+}
+.footerItem:not(:last-child) {
+  margin-right: 20px;
+}
+.footerItem>a {
+  color: #ccc;
+}
+.footerItem>a:hover {
+  color: white;
+}
+.corp {
+  text-align: center;
+}
